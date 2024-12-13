@@ -18,3 +18,11 @@ a.active hr{
   font-weight: 400;
   font-style: normal;
 }
+
+/* hamburger menu change color */
+@media ( max-width:640px ) {
+  a.ative{
+    background-color: black;
+    color: white;
+  }
+}

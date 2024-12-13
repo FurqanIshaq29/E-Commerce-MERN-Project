@@ -10,7 +10,8 @@ const Navbar = () => {
   return (
     <div className='flex items-center justify-between py-5 font-medium'>
 
-        <img src={assets.logo} className='w-36' alt="logo" />  
+        {/* Logo takes to homepafe */}
+        <Link to='/'><img src={assets.logo} className='w-36' alt="logo" />  </Link>
 
         {/* nav bar */}
         <ul className='hidden sm:flex gap-5 text-sm text-gray-700'>
