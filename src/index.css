@@ -20,7 +20,7 @@ a.active hr{
 }
 
 /* hamburger menu change color */
-@media ( max-width:640px ) {
+@media (max-width:640px) {
   a.ative{
     background-color: black;
     color: white;
