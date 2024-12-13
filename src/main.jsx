@@ -6,7 +6,7 @@ import { BrowserRouter } from 'react-router-dom'
 import ShopContextProvider from './context/ShopContext.jsx'
 // browser router create kia he ta k route bana sken different pages k liye
 
-ReactDOM.createRoot(document.getElementById('root')).render(
+createRoot(document.getElementById('root')).render(
   <BrowserRouter>
     <ShopContextProvider>
       <App />
