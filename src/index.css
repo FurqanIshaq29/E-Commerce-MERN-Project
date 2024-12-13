@@ -4,7 +4,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
 /* jab kisi menu pe click kerte hen to us k hr line ko visible ker deta he  */
 a.active hr{
   display: block;

@@ -73,7 +73,7 @@ const Navbar = () => {
                         <img className='h-4 rotate-180' src={assets.dropdown_icon} alt="" />
                         <p>Back</p>
                     </div>
-                    
+
                     {/* onlciking these buttons we are going to homepage using these functions */}
                     <NavLink onClick={()=>setVisible(false)} className='py-2 pl-6 border' to='/'>HOME</NavLink>
                     <NavLink onClick={()=>setVisible(false)} className='py-2 pl-6 border' to='/collection'>COLLECTION</NavLink>
