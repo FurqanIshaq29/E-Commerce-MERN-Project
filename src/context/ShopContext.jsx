@@ -1,6 +1,7 @@
 import { createContext, useEffect, useState } from "react";
 import { products } from "../assets/assets";
 import { toast } from "react-toastify";
+import Product from "../pages/Product";
 
 export const ShopContext = createContext();
 
@@ -67,13 +68,35 @@ const ShopContextProvider = (props) => {
 
     }
 
+    //Total Cart Amount
+
+    const getCartAmount = (itemId, size, quantity) => {
+
+        let totalCartAmount = 0
+        for(const items in cartItems){
+            let itemInfo = products.find((product) => product._id ===items );
+            for(const item in cartItems[items]){
+                try {
+                    if(cartItems[items][item] > 0){
+                        totalCartAmount += itemInfo.price * cartItems[items][item];
+                    }
+                } catch (error) {
+                    
+                }
+            }
+        }
+        return totalCartAmount;
+
+    }
+
     // passing these variables so that we can access it in any component
     const value = {
         products , currency, delivery_fee,
          search,setSearch,showSearch,setShowSearch,
         cartItems,addToCart,
         getCartCount,
-        updateQuantity
+        updateQuantity,
+        getCartAmount
     }
 
     return (
