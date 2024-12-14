@@ -52,20 +52,28 @@ const ShopContextProvider = (props) => {
                 }
             }
         }
-
-
         return totalCount;
     }
 
     
-    
+    //cart delete button
+
+    const updateQuantity = async (itemId, size, quantity) => {
+
+        let cartData = structuredClone(cartItems);
+
+        cartData[itemId][size] = quantity;
+        setCartItems(cartData);
+
+    }
 
     // passing these variables so that we can access it in any component
     const value = {
         products , currency, delivery_fee,
          search,setSearch,showSearch,setShowSearch,
         cartItems,addToCart,
-        getCartCount
+        getCartCount,
+        updateQuantity
     }
 
     return (
