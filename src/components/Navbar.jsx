@@ -1,10 +1,13 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import {assets} from '../assets/assets'
 import { Link, NavLink } from 'react-router-dom'
+import { ShopContext } from '../context/ShopContext'
 
 const Navbar = () => {
 
     const [visible,setVisible] = useState(false)
+
+    const {setShowSearch} = useContext(ShopContext)
 
     // making the nav bar 
   return (
@@ -40,7 +43,7 @@ const Navbar = () => {
 
         <div className='flex items-center gap-6'>
             {/* search button */}
-            <img src={assets.search_icon} className='w-5 cursor-pointer' alt="search" />
+            <img onClick={()=>setShowSearch(true)} src={assets.search_icon} className='w-5 cursor-pointer' alt="search" />
             
             {/* cursor pointer to profile
             profile pe hover kerne se ik menu khulta aur menu pe agey different hover
